@@ -1,0 +1,19 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: UI Component Smart Generator
+  license:
+    name: MIT
+servers:
+  - url: TBA
+
+paths:
+  /ui-component:
+    $ref: "./open_api_schemas/resources/ui_component.yaml"
+components:
+  parameters:
+    $ref: "./open_api_schemas/parameters/_index.yaml"
+  schemas:
+    $ref: "./open_api_schemas/schemas/_index.yaml"
+  responses:
+    $ref: "./open_api_schemas/responses/_index.yaml"

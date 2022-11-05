@@ -1,0 +1,12 @@
+// Errors
+UnexpectedError:
+  $ref: "./UnexpectedError.yaml"
+NullResponse:
+  $ref: "./NullResponse.yaml"
+
+// UI component
+UI_component_response:
+  $ref: "./UI_component_response.yaml"
+
+UI_component_bad_request_response:
+  $ref: "./UI_component_bad_request_response.yaml"

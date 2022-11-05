@@ -1,0 +1,6 @@
+type: object
+required:
+  - component
+properties:
+  component:
+    type: string

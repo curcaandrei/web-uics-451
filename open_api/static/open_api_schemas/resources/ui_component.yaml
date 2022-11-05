@@ -1,0 +1,28 @@
+post:
+  summary: Detail
+  operationId: getComponentByDescription
+  description: Generates a UI component based on the given description
+  tags:
+    - ui_component
+  requestBody:
+    required: true
+    description: The description of the UI component to generate
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/UI_component_request.yaml"
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/UI_component_response.yaml"
+    '400':
+      description: Unexpected response
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/UI_component_bad_request_response.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
