@@ -1,5 +1,10 @@
 Error:
   $ref: "./Error.yaml"
 
+// ui component
 UI_component_request:
   $ref: "./UI_component_request.yaml"
+
+// auth
+login_request:
+  $ref: "./auth_request.yaml"

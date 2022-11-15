@@ -1,23 +1,23 @@
 post:
-  summary: Generates a UI component based on the given description
-  operationId: getComponentByDescription
-  description: Generates a UI component based on the given description
+  summary: Login user
+  operationId: login
+  description: Checks if the user exists and if the credentials are correct. Returns a JWT token
   tags:
-    - UI-Component
+    - Authentication
   requestBody:
     required: true
-    description: The description of the UI component to generate
+    description: The user details
     content:
       application/json:
         schema:
-          $ref: "../schemas/UI_component_request.yaml"
+          $ref: "../schemas/auth_request.yaml"
   responses:
     '200':
       description: Expected response to a valid request
       content:
         application/json:
           schema:
-            $ref: "../responses/UI_component_response.yaml"
+            $ref: "../responses/login_response.yaml"
     '400':
       description: Unexpected response
       content:
@@ -26,4 +26,3 @@ post:
             $ref: "../responses/bad_request.yaml"
     default:
       $ref: "../responses/UnexpectedError.yaml"
-

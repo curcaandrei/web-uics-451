@@ -1,16 +1,22 @@
-post:
-  summary: Generates a UI component based on the given description
-  operationId: getComponentByDescription
-  description: Generates a UI component based on the given description
+get:
+  summary: Get component created by user
+  operationId: getComponentById
+  description: Retrieves an existing component previously created by user
   tags:
     - UI-Component
-  requestBody:
-    required: true
-    description: The description of the UI component to generate
-    content:
-      application/json:
-        schema:
-          $ref: "../schemas/UI_component_request.yaml"
+  parameters:
+    - name: userId
+      in: path
+      description: The user id
+      required: true
+      schema:
+        type: string
+    - name: componentId
+      in: path
+      description: The component id
+      required: true
+      schema:
+        type: string
   responses:
     '200':
       description: Expected response to a valid request

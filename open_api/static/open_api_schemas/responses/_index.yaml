@@ -8,5 +8,9 @@ NullResponse:
 UI_component_response:
   $ref: "./UI_component_response.yaml"
 
-UI_component_bad_request_response:
-  $ref: "./UI_component_bad_request_response.yaml"
+bad_request:
+  $ref: "./bad_request.yaml"
+
+// auth
+login_response:
+  $ref: "./login_response.yaml"

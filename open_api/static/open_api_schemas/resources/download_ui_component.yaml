@@ -1,0 +1,36 @@
+get:
+  summary: Download the UI component
+  operationId: downloadUiComponent
+  description: Downloads an existing component
+  tags:
+    - UI-Component
+  parameters:
+    - name: userId
+      in: path
+      description: The user id
+      required: true
+      schema:
+        type: string
+    - name: componentId
+      in: path
+      description: The component id
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/pdf:
+          schema:
+            type: string
+            format: binary
+    '400':
+      description: Unexpected response
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/bad_request.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+
