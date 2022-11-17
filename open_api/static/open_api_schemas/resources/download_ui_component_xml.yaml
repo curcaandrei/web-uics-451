@@ -1,7 +1,7 @@
 get:
-  summary: Get component created by user
-  operationId: getComponentById
-  description: Retrieves an existing component previously created by user
+  summary: Download the UI component as XML
+  operationId: downloadUiComponentPdf
+  description: Downloads an existing component as XML
   tags:
     - UI-Component
   parameters:
@@ -17,19 +17,14 @@ get:
       required: true
       schema:
         type: string
-    - name: filters
-      in: query
-      description: Filters for components
-      required: false
-      schema:
-        type: string
   responses:
     '200':
       description: Expected response to a valid request
       content:
-        application/json:
+        application/xml:
           schema:
-            $ref: "../responses/UI_component_response.yaml"
+            type: string
+            format: binary
     '400':
       description: Unexpected response
       content:

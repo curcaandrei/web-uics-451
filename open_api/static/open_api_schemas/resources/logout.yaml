@@ -1,0 +1,24 @@
+post:
+  summary: Logout user
+  operationId: logout
+  description: Logout's an user
+  tags:
+    - Authentication
+  requestBody:
+    required: true
+    description: The user details
+    content:
+      application/json:
+        schema:
+          $ref: "../schemas/logout_request.yaml"
+  responses:
+    '200':
+      description: No response required
+    '400':
+      description: Unexpected response
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/bad_request.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"

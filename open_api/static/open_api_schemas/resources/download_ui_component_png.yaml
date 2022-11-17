@@ -1,7 +1,7 @@
 get:
-  summary: Download the UI component
-  operationId: downloadUiComponent
-  description: Downloads an existing component
+  summary: Download the UI component as PNG
+  operationId: downloadUiComponentPng
+  description: Downloads an existing component as PNG
   tags:
     - UI-Component
   parameters:
@@ -21,7 +21,7 @@ get:
     '200':
       description: Expected response to a valid request
       content:
-        application/pdf:
+        application/image/png:
           schema:
             type: string
             format: binary

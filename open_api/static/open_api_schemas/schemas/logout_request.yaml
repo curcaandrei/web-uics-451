@@ -1,0 +1,6 @@
+type: object
+required:
+  - JWT
+properties:
+  JWT:
+    type: string

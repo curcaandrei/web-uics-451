@@ -6,18 +6,42 @@ info:
 paths:
   /ui-component/{userId}/{componentId}:
     $ref: "./open_api_schemas/resources/get_ui_component.yaml"
-  /ui-component/{userId}/{componentId}/download:
-    $ref: "./open_api_schemas/resources/download_ui_component.yaml"
+  /ui-component/{userId}/{componentId}/download/PDF:
+    $ref: "./open_api_schemas/resources/download_ui_component_pdf.yaml"
+  /ui-component/{userId}/{componentId}/download/XML:
+    $ref: "./open_api_schemas/resources/download_ui_component_xml.yaml"
+  /ui-component/{userId}/{componentId}/download/SVG:
+    $ref: "./open_api_schemas/resources/download_ui_component_svg.yaml"
+  /ui-component/{userId}/{componentId}/download/PNG:
+    $ref: "./open_api_schemas/resources/download_ui_component_png.yaml"
   /ui-component:
     $ref: "./open_api_schemas/resources/ui_component.yaml"
   /auth/login:
     $ref: "./open_api_schemas/resources/login.yaml"
   /auth/register:
     $ref: "./open_api_schemas/resources/register.yaml"
+  /auth/modify-user:
+    $ref: "./open_api_schemas/resources/modify_account_details.yaml"
+  /auth/logout:
+    $ref: "./open_api_schemas/resources/logout.yaml"
+
 components:
   parameters:
     $ref: "./open_api_schemas/parameters/_index.yaml"
   schemas:
-    $ref: "./open_api_schemas/schemas/_index.yaml"
-  responses:
-    $ref: "./open_api_schemas/responses/_index.yaml"
+    logout:
+      $ref: "./open_api_schemas/schemas/logout_request.yaml"
+    auth_request:
+      $ref: "./open_api_schemas/schemas/auth_request.yaml"
+    Error:
+      $ref: "./open_api_schemas/schemas/Error.yaml"
+    UI_Component_request:
+      $ref: "./open_api_schemas/schemas/UI_component_request.yaml"
+    bad_request_response:
+      $ref: "./open_api_schemas/responses/bad_request.yaml"
+    login_response:
+      $ref: "./open_api_schemas/responses/login_response.yaml"
+    UI_component_response:
+      $ref: "./open_api_schemas/responses/UI_component_response.yaml"
+    UnexpectedError:
+      $ref: "./open_api_schemas/responses/UnexpectedError.yaml"

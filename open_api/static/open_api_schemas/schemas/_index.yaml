@@ -8,3 +8,5 @@ UI_component_request:
 // auth
 login_request:
   $ref: "./auth_request.yaml"
+logout_request:
+  $ref: "./auth_request.yaml"
