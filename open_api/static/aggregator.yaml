@@ -16,6 +16,8 @@ paths:
     $ref: "./open_api_schemas/resources/download_ui_component_png.yaml"
   /ui-component:
     $ref: "./open_api_schemas/resources/ui_component.yaml"
+  /helper/manual:
+    $ref: "./open_api_schemas/resources/manual.yaml"
   /auth/login:
     $ref: "./open_api_schemas/resources/login.yaml"
   /auth/register:

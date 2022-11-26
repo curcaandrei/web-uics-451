@@ -3,7 +3,7 @@ get:
   operationId: downloadUiComponentPng
   description: Downloads an existing component as PNG
   tags:
-    - UI-Component
+    - DownloadManager
   parameters:
     - name: userId
       in: path

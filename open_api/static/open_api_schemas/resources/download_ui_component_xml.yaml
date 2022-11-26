@@ -3,7 +3,7 @@ get:
   operationId: downloadUiComponentPdf
   description: Downloads an existing component as XML
   tags:
-    - UI-Component
+    - DownloadManager
   parameters:
     - name: userId
       in: path

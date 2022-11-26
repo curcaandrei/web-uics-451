@@ -14,3 +14,6 @@ bad_request:
 // auth
 login_response:
   $ref: "./login_response.yaml"
+
+manual_response:
+  $ref: "./manual_response.yaml"

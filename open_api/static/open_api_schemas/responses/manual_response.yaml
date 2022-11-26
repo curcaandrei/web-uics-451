@@ -1,0 +1,7 @@
+type: array
+items:
+  properties:
+    key:
+      type: string
+    details:
+      type: string

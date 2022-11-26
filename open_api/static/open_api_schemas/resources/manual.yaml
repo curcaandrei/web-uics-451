@@ -1,0 +1,22 @@
+get:
+  summary: Get the user manual
+  operationId: getManual
+  description: Retrieves the app's manual for users
+  tags:
+    - Helper
+  responses:
+    '200':
+      description: Expected response to a valid request
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/manual_response.yaml"
+    '400':
+      description: Unexpected response
+      content:
+        application/json:
+          schema:
+            $ref: "../responses/bad_request.yaml"
+    default:
+      $ref: "../responses/UnexpectedError.yaml"
+
