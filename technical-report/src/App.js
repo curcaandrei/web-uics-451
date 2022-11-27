@@ -58,7 +58,7 @@ function App() {
         </section>
         <section id="introduction" role="doc-introduction">
           <h2>Introduction</h2>
-          <p>Our project is designed to be used by people that have lower level of experience in coding but need to create simple components with specific layout. Users can use a set of rules and commands that allow them to specify how the elements should be placed in the UI component that they create. More than that, they can also download the html source code of their layouts and use it in their own projects. This feature also helps them learn how to code better since the content provided is an exact translation of the text description ptterns they use into htm code.</p>
+          <p>Our project is designed to be used by people that have lower level of experience in coding but need to create simple components with specific layout. Users can use a set of rules and commands that allow them to specify how the elements should be placed in the UI component that they create. More than that, they can also download the xml source code of their layouts and use it in their own projects. This feature also helps them learn how to code better since the content provided is an exact translation of the text description ptterns they use into htm code.</p>
           <p>The users have also permanent access to every component that they created in case they want to reuse them.</p>
         </section>
         <section id="structure">
@@ -115,7 +115,7 @@ function App() {
                 <li>
                   <div class="secondary-list-item">
                     <span class="secondary-list-title">Component Generator</span>
-                    <span>This module is responsible with generating and returning html code based on text description commands given by users.</span>
+                    <span>This module is responsible with generating and returning xml code based on text description commands given by users.</span>
                   </div>
                 </li>
                 <li>
@@ -140,7 +140,7 @@ function App() {
             </section>
             <section id="interpreter">
               <h4>Text Interpreter</h4>
-              <p>The text interpreter handles the core function of our application: receiving description text for components and processing it to generate correct html code.</p>
+              <p>The text interpreter handles the core function of our application: receiving description text for components and processing it to generate correct xml code.</p>
             </section>
             <section id="storage">
               <h4>Storage Unit</h4>
@@ -153,7 +153,20 @@ function App() {
         </section>
         <section id="data">
           <h2>Data Models</h2>
-          <p></p>
+          <ol>
+            <li>
+              <div class="secondary-list-item">
+                <span class="secondary-list-title">Data Base</span>
+                <span>In our data base we store all users with their register data. This data is managed by our API system. Another usage of the data base is keeping xml code created in our application in order to give users the possibility of accessing them later.</span>
+              </div>
+            </li>
+            <li>
+              <div class="secondary-list-item">
+                <span class="secondary-list-title">Ontology</span>
+                <span>To interpret the description commands of users we need to create our own data models which can parse and uderstand the text. These are used to generate the xml code for components. For the models we use a set of keywords which are stored in the code of an interpreter tool.</span>
+              </div>
+            </li>
+          </ol>
         </section>
       </body>
     </html>
